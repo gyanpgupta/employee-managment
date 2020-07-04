@@ -6,11 +6,8 @@
         "concurrently": "^5.2.0"
     },
     "scripts": {
-        "client-install": "npm install --prefix client",
-        "client": "cd employee-www && yarn start --prefix client",
+        "client": "cd employee-www && yarn start",
         "server": "cd employee-api && yarn start",
-        "start": "cd employee-api && yarn start",
-        "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+        "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
     }
 }
