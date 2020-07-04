@@ -1,0 +1,13 @@
+{
+    "name": "employee-management",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "concurrently": "^5.2.0"
+    },
+    "scripts": {
+        "client": "cd employee-www && yarn start",
+        "server": "cd employee-api && yarn start",
+        "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    }
+}
